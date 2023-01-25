@@ -2,12 +2,12 @@ package multithreading.threads;
 
 import multithreading.threads.dominio.Account;
 
-public class ThreadAccount01 implements Runnable {
+public class Thread03Account implements Runnable {
 
     private final Account account = new Account();
 
     public static void main(String[] args) {
-        ThreadAccount01 threadAccount01 = new ThreadAccount01();
+        Thread03Account threadAccount01 = new Thread03Account();
         Thread t1 = new Thread(threadAccount01, "Hestia");
         Thread t2 = new Thread(threadAccount01, "Bell Cranel");
         t1.start();

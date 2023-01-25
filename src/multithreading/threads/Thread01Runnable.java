@@ -1,10 +1,10 @@
 package multithreading.threads;
 
-class ThreadExample extends Thread {
+class ThreadExampleRunnable implements Runnable {
 
     private final char c;
 
-    public ThreadExample(char c) {
+    public ThreadExampleRunnable(char c) {
         this.c = c;
     }
 
@@ -20,13 +20,13 @@ class ThreadExample extends Thread {
     }
 }
 
-public class Thread01 {
+public class Thread01Runnable {
 
     public static void main(String[] args) {
-        ThreadExample t1 = new ThreadExample('A');
-        ThreadExample t2 = new ThreadExample('B');
-        ThreadExample t3 = new ThreadExample('C');
-        ThreadExample t4 = new ThreadExample('D');
+        Thread t1 = new Thread(new ThreadExampleRunnable('A'));
+        Thread t2 = new Thread(new ThreadExampleRunnable('B'));
+        Thread t3 = new Thread(new ThreadExampleRunnable('C'));
+        Thread t4 = new Thread(new ThreadExampleRunnable('D'));
         t1.start();
         t2.start();
         t3.start();

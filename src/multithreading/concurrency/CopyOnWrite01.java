@@ -5,10 +5,11 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 
-public class CopyOnWrite {
+public class CopyOnWrite01 {
 
     public static void main(String[] args) {
         List<Integer> list = new CopyOnWriteArrayList<>();
+
         for (int i = 0; i < 2000; i++) {
             list.add(i);
         }

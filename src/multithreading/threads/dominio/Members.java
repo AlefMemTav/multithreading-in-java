@@ -45,6 +45,7 @@ public class Members {
         open = false;
         synchronized (this.emails) {
             System.out.println(Thread.currentThread().getName() + " notifying everyone that we are no longer receiving emails.");
+            this.emails.notifyAll();
         }
     }
 

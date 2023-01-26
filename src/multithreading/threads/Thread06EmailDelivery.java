@@ -1,7 +1,7 @@
 package multithreading.threads;
 
 import javax.swing.*;
-import multithreading.service.EmailDeliveryService;
+import multithreading.threads.service.EmailDeliveryService;
 import multithreading.threads.dominio.Members;
 
 public class Thread06EmailDelivery {

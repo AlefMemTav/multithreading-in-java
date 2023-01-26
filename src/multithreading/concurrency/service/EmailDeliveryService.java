@@ -1,6 +1,6 @@
-package multithreading.service;
+package multithreading.concurrency.service;
 
-import multithreading.threads.dominio.Members;
+import multithreading.concurrency.dominio.Members;
 
 public class EmailDeliveryService implements Runnable {
 

@@ -21,7 +21,8 @@ public final class Quote {
      */
     public static Quote newQuote(String value) {
         String[] values = value.split(":");
-        return new Quote(values[0], Double.parseDouble(values[1]), Discount.Code.valueOf(values[2]));
+        return new Quote(values[0], Double.parseDouble(values[1].replace(',', '.')),
+                 Discount.Code.valueOf(values[2]));
     }
 
     @Override

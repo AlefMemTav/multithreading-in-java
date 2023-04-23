@@ -1,15 +1,23 @@
-package multithreading.concurrency;
+package multithreading.concurrency.AtomicInteger.ex2;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 class Counter {
 
     private int count;
     private final AtomicInteger atomicInteger = new AtomicInteger();
+    private final Lock lock = new ReentrantLock(true);
 
     void increment() {
-        count++;
-        atomicInteger.incrementAndGet();
+        lock.lock();
+        try {
+            count++;
+            atomicInteger.incrementAndGet();
+        } finally {
+            lock.unlock();
+        }
     }
 
     public int getCount() {
@@ -21,11 +29,10 @@ class Counter {
     }
 }
 
-public class AtomicInteger01 {
+public class AtomicInteger02 {
 
     public static void main(String[] args) throws InterruptedException {
         Counter counter = new Counter();
-
         Runnable r = () -> {
             for (int i = 0; i < 10000; i++) {
                 counter.increment();
@@ -40,5 +47,4 @@ public class AtomicInteger01 {
         System.out.println(counter.getCount());
         System.out.println(counter.getAtomicInteger());
     }
-
 }

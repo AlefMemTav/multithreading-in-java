@@ -7,8 +7,9 @@ public class Synchronized01 {
     public static class Thread02Runnable implements Runnable {
 
         @Override
+        // The synchronized will kill the concurrency for a resource, because just one thread can obtain access at a time
         public synchronized void run() { // With the synchronized, only one thread can execute the run method at a time, within the same Runnable instance
-            i++; //With synchronized the concurrency issue to the variable i is eliminated           
+            i++; //With synchronized the concurrency issue to the variable i is eliminated        
             String tName = Thread.currentThread().getName();
             System.out.println(tName + ": " + i);
         }

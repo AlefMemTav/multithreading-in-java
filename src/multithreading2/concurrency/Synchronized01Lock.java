@@ -6,7 +6,7 @@ public class Synchronized01Lock {
 
     public static class Thread02Runnable implements Runnable {
 
-        static Object lock1 = new Object(); // A object that locks the synchrony.
+        static Object lock1 = new Object(); // A object that locks the synchrony
         static Object lock2 = new Object();
 
         @Override

@@ -1,10 +1,10 @@
 package multithreading.threads;
 
-class ThreadExampleRunnable implements Runnable {
+class ThreadExampleRunnable1 implements Runnable {
 
     private final char c;
 
-    public ThreadExampleRunnable(char c) {
+    public ThreadExampleRunnable1(char c) {
         this.c = c;
     }
 
@@ -28,10 +28,10 @@ class ThreadExampleRunnable implements Runnable {
 public class Thread01PriorityAndSleep {
 
     public static void main(String[] args) {
-        Thread t1 = new Thread(new ThreadExampleRunnable('A'), "T1A");
-        Thread t2 = new Thread(new ThreadExampleRunnable('B'), "T1B");
-        Thread t3 = new Thread(new ThreadExampleRunnable('C'), "T1C");
-        Thread t4 = new Thread(new ThreadExampleRunnable('D'), "T1D");
+        Thread t1 = new Thread(new ThreadExampleRunnable1('A'), "T1A");
+        Thread t2 = new Thread(new ThreadExampleRunnable1('B'), "T1B");
+        Thread t3 = new Thread(new ThreadExampleRunnable1('C'), "T1C");
+        Thread t4 = new Thread(new ThreadExampleRunnable1('D'), "T1D");
         t4.setPriority(Thread.MAX_PRIORITY);
         t1.start();
         t2.start();

@@ -11,6 +11,7 @@ public class SynchronizedList {
 	public static void main(String[] args) throws InterruptedException {
 
 		list = Collections.synchronizedList(list); // Synchronized
+		
 		MyRunnable runnable = new MyRunnable();
 
 		Thread t0 = new Thread(runnable);

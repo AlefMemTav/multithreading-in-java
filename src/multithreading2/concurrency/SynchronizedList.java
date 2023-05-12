@@ -28,8 +28,8 @@ public class SynchronizedList {
 		@Override
 		public void run() {
 			list.add("Hello World!");
-			String name = Thread.currentThread().getName();
-			System.out.println(name + " added to the list");
+			String tName = Thread.currentThread().getName();
+			System.out.println(tName + " added to the list");
 		}
 	}
 }

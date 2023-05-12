@@ -6,7 +6,7 @@ public class Volatile02 {
 
 	// private static int num = 0; // BAD
 	// private static boolean finished = false; // BAD
-	private static volatile int num = 0;
+	private static volatile int num = 0; // Good
 	private static volatile boolean finished = false;
 
 	private static class MeuRunnable implements Runnable {

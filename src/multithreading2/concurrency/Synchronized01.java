@@ -16,7 +16,7 @@ public class Synchronized01 {
 
         /*
         @Override
-        public void run() { // Note: Just one run method is permited
+        public void run() { // Note: Just one run method is permitted
             synchronized (this) { // You can too use the keyword synchronized in a block of code inside the run method
                 i++;
                 String tName = Thread.currentThread().getName();

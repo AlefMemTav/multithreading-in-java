@@ -10,7 +10,7 @@ public class Thread01 {
         // To create a new thread with runnable interface
         Thread01Runnable runnable = new Thread01Runnable();
         Thread t0 = new Thread(runnable);
-        //t1.run(); // It will execute the thread t1 on the same thread t, without creating a new thread
+        //t0.run(); // It will execute the thread t0 on the same thread t, without creating a new thread
         t0.start(); // To create a new thread you must use the method start (and not use run method)
 
         // To create a new thread with runnable using lambda function
